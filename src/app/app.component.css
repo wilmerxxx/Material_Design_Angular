@@ -49,3 +49,67 @@ section {
 .mat-form-field {
   margin-right: 4px;
 }
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 10px;
+}
+mat-grid-tile {
+  background: rgb(202, 5, 71);
+  border-radius: 50px;
+
+}
+
+mat-grid-list {
+  margin: 25px;
+
+}
+
+.example-card {
+  max-width: 400px;
+  left: 35%;
+  margin: 15px;
+
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+mat-slider {
+  width: 300px;
+}
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}

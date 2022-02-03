@@ -3,6 +3,9 @@ import {FlatTreeControl} from '@angular/cdk/tree';
 import {Component, Injectable} from '@angular/core';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 import {BehaviorSubject} from 'rxjs';
+import {OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormControl} from '@angular/forms';
 
 
 
@@ -134,14 +137,33 @@ export class AppComponent {
 
   /** The selection for checklist */
   checklistSelection = new SelectionModel<TodoItemFlatNode>(true /* multiple */);
+
+  /*Elementos de checked y del sidenav*/
   title = 'proyecto';
     checked = false;
     indeterminate = false;
     labelPosition: 'before' | 'after' = 'after';
     disabled = false;
+    showFiller = false;
+    favoriteSeason!: string;
+    seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
+    firstFormGroup!: FormGroup;
+    secondFormGroup!: FormGroup;
+    isEditable = false;
+   private _formBuilder: any;
+   formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
+
+    return value;
+  }
+  toppings = new FormControl();
+  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
 
 
-  constructor(private _database: ChecklistDatabase) {
+
+  constructor(private _database: ChecklistDatabase, _formBuilder: FormBuilder) {
     this.treeFlattener = new MatTreeFlattener(
       this.transformer,
       this.getLevel,
@@ -155,6 +177,14 @@ export class AppComponent {
       this.dataSource.data = data;
     });
 
+  }
+  ngOnInit() {
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required],
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required],
+    });
   }
 
   getLevel = (node: TodoItemFlatNode) => node.level;
