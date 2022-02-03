@@ -3,7 +3,7 @@
     <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>My App</span>
+    <span>Menu</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>android</mat-icon>
@@ -53,7 +53,7 @@
 <!--checkbox-->
 <mat-card>
   <mat-card-content>
-    <h2 class="example-h2">Checkbox configuration</h2>
+    <h2 class="example-h2">Configuración Checkbox </h2>
 
     <section class="example-section">
       <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
@@ -76,7 +76,7 @@
 
 <mat-card class="result">
   <mat-card-content>
-    <h2 class="example-h2">Result</h2>
+    <h2 class="example-h2">Resultado</h2>
 
     <section class="example-section">
       <mat-checkbox
@@ -85,7 +85,7 @@
           [(indeterminate)]="indeterminate"
           [labelPosition]="labelPosition"
           [disabled]="disabled">
-        I'm a checkbox
+        Casilla de verificación
       </mat-checkbox>
     </section>
   </mat-card-content>
@@ -130,16 +130,16 @@
     <!--sidenav-->
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <p>Informacion de Angular CLI</p>
+    <p *ngIf="showFiller">Las versiones principales de Angular CLI siguen la versión principal admitida de Angular, pero las versiones secundarias se pueden lanzar por separado..</p>
     <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
+      Alternar texto adicional
     </button>
   </mat-drawer>
 
   <div class="example-sidenav-content">
     <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
+      Alternar navegación lateral
     </button>
   </div>
 
@@ -194,19 +194,19 @@
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Raza Golden</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
+      El Shiba Inu es el más pequeño de las seis razas originales y distintas de perros spitz de Japón.
+      Un perro pequeño y ágil que se adapta muy bien a los terrenos montañosos, el Shiba Inu fue originalmente
+      criado para la caza.
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+    <button mat-button>Me gusta</button>
+    <button mat-button>Compartir</button>
   </mat-card-actions>
 </mat-card>
 
